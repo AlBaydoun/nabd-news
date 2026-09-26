@@ -46,7 +46,8 @@ npm start
 
 - Refresh asks configured publishers for their current feeds; publishers decide when new stories are available.
 - Full text depends on publishers allowing article extraction. Restricted/unavailable pages remain labeled.
-- Language learning translates headlines and short summaries, not complete articles. MyMemory translations have service limits and may contain errors.
+- The Language Studio keeps the same story collection across Arabic, English, Russian and German, with a four-language comparison view. Reference stories have prepared translations; new stories load translations when selected. Learning translates headlines and short summaries, not complete articles. MyMemory translations have service limits and may contain errors.
+- Topics have individual colors and wave dividers. Religion & evidence includes current feeds and reference readings about arguments for and against belief, historical evidence and religious research; these do not assign a truth score to a religion.
 - Saved story cards, translations and preferences use browser storage. They do not transfer automatically from the previous ChatGPT Site address to a Hostinger address, or between devices. Clearing browser storage removes them. Complete article pages are fetched when opened, not permanently archived.
 - This standalone version does not use ChatGPT sign-in or Sites access controls. It has no account system.
 
@@ -62,4 +63,4 @@ Hostinger guide: https://www.hostinger.com/support/how-to-deploy-a-nodejs-websit
 
 ## Verification
 
-Prepared on 27 September 2026. Next.js production build and 13 automated tests passed. Local production HTTP checks passed for all four editions, German feed fetching, NASA article extraction, and a prepared German learning translation. Hostinger deployment has not yet been run.
+Updated on 27 September 2026. Validate with `npm run build` and `node --experimental-strip-types --test tests/*.test.mjs`. The app is deployed from this repository to Hostinger.
