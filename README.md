@@ -64,3 +64,13 @@ Hostinger guide: https://www.hostinger.com/support/how-to-deploy-a-nodejs-websit
 ## Verification
 
 Updated on 27 September 2026. Validate with `npm run build` and `node --experimental-strip-types --test tests/*.test.mjs`. The app is deployed from this repository to Hostinger.
+
+## Mobile reader and media
+
+The mobile reader fills the screen, supports RTL, keeps text readable at 320px, and provides 44px controls. Card images and body areas open the same on-site reader; saved/read controls remain independent. Extracted article references keep safe, clickable links.
+
+RSS image handling accepts extensionless CDN thumbnails, nested media groups, lazy images and relative URLs. Missing/broken card images try publisher article metadata only near the viewport, then use a labeled topic fallback. Images keep reserved dimensions. No unrestricted image proxy is exposed.
+
+The reader detects YouTube, Vimeo, Dailymotion, and direct MP4/WebM/Ogg video from publisher markup and VideoObject metadata. Players load after a user tap and stay in the reader, with an explicit source fallback for unsupported or restricted playback. Publisher scripts and arbitrary iframes are not copied. Paywall restrictions remain enforced.
+
+Validation: production build, TypeScript and 21 automated tests; browser checks at 320px and 390px for editions, language learning, search, save/reload, settings, article images and inline player insertion. Individual publishers can still block extraction, hotlinking or embedding.
