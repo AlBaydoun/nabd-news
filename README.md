@@ -65,6 +65,17 @@ Hostinger guide: https://www.hostinger.com/support/how-to-deploy-a-nodejs-websit
 
 Updated on 27 September 2026. Validate with `npm run build` and `node --experimental-strip-types --test tests/*.test.mjs`. The app is deployed from this repository to Hostinger.
 
+## Discovery and learning upgrade — 24 October 2026
+
+- A live discovery overview shows available stories from the past 24 hours, connected feeds, unread stories and library counts. Topic tiles open the corresponding news section.
+- Publisher and publication-date filters combine with search, evidence, groups and saved/unread views. Switch between large cards and a compact list. Search tolerates Arabic vowel marks and Latin accents.
+- The Language Studio keeps the same article in four languages, adds searchable current/reference collections and a practice mode that reveals other languages only when requested. A local vocabulary notebook includes recall cards and mastered-word tracking.
+- Article reading controls retain text size and book-font preferences, with scroll progress. Full article extraction, media and source links retain publisher access restrictions.
+- Settings can export a validated JSON library backup and merge it into another browser. Imports preserve existing preferences and merge saved articles, learning versions and vocabulary. No account or cloud synchronization is implied.
+- Feed requests share work while in progress, deduplicate tracking URLs and duplicate titles from the same publisher, and retain the last successful in-memory feed when all publishers fail. Manual refresh is limited to once per minute per edition to reduce unnecessary publisher requests. The normal cache lasts ten minutes.
+
+Validation: production build, TypeScript and 26 tests. Browser checks cover practice/reveal, vocabulary persistence, backup download/import, publisher/date filters, compact view, Arabic mobile layout and reading font controls.
+
 ## Mobile reader and media
 
 The mobile reader fills the screen, supports RTL, keeps text readable at 320px, and provides 44px controls. Card images and body areas open the same on-site reader; saved/read controls remain independent. Extracted article references keep safe, clickable links.
